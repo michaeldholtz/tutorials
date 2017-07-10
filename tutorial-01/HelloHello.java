@@ -51,9 +51,14 @@ public class HelloHello{
       num = Integer.parseInt(args[0]);
     }
     
+    String qString = new String();
+    for (int i = 0; i<num; i+=1){
+      qString = qString+ "Q";
+    }
+    
     /* print out the message num times */
     for(int i=0; i<num; i+=1){
-      System.out.println("Hello, World!");
+      System.out.println(qString);
     } 
     
   } // end main method
