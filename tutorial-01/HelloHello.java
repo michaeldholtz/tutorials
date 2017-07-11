@@ -37,6 +37,8 @@
  * 
  */
 
+/* import the Scanner class */
+import java.util.Scanner;
 
 public class HelloHello{
   
@@ -45,11 +47,23 @@ public class HelloHello{
     /* defult number of time to print the message */
     int num = 1;
     
+        /* declare variable */
+    Scanner keyboardScanner;   
+    
+        /* create the Scanner object to read from the
+     * keyboard. System.in is the standard input
+     * which is the keyboard                        */
+    keyboardScanner = new Scanner(System.in);
+    
     /* update number of times to print message if a command 
      * line argument is present */
-    if( args.length > 0 ){
-      num = Integer.parseInt(args[0]);
-    }
+    //if( args.length > 0 ){
+      //num = Integer.parseInt(args[0]);
+    //}
+    
+    System.out.print("enter an integer :");
+    num = keyboardScanner.nextInt();
+    System.out.println("you entered " + num);
     
     String qString = new String();
     for (int i = 0; i<num; i+=1){
